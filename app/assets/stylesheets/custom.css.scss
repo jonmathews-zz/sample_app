@@ -4,11 +4,9 @@
 
 $grayMediumLight: #eaeaea;
 
-$grayMediumLight: #eaeaea;
-
 @mixin box_sizing {
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -109,24 +107,13 @@ footer {
   }
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
 /* sidebar */
-
 aside {
   section {
     padding: 10px 0;
     border-top: 1px solid $grayLighter;
     &:first-child {
-      border: 0;
+      border:0;
       padding-top: 0;
     }
     span {
@@ -143,11 +130,6 @@ aside {
   }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
 /* forms */
 
 input, textarea, select, .uneditable-input {
@@ -160,7 +142,7 @@ input, textarea, select, .uneditable-input {
 }
 
 #error_explanation {
-  color:#f00;
+  color: #f00;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
@@ -170,4 +152,34 @@ input, textarea, select, .uneditable-input {
 .field_with_errors {
   @extend .control-group;
   @extend .error;
- }
+}
+
+/* users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    paddding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+/* miscellaneous */
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing; 
+}
